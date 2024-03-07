@@ -1,0 +1,28 @@
+spring:
+  datasource:
+    username: asdsasad
+    password: asdsdasda
+    url: jdbc:postgresql://localhost:5432/my_database
+    driver-class-name: org.postgresql.Driver
+  flyway:
+    table: flyway_migrations
+    locations: classpath:db/migration
+    create-schemas: true
+    schemas: public
+  docker:
+    compose:
+      file: docker-compose.yml
+      lifecycle-management: start_and_stop
+      skip:
+        in-tests: false
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate:
+        format_sql: true
+        show_sql: true
+server:
+  port: 8080
+  servlet:
+    context-path: /api
