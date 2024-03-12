@@ -1,6 +1,6 @@
 package com.example.backend.domain.entity.converters;
 
-import com.example.backend.domain.entity.CourseType;
+import com.example.backend.domain.entity.enums.CourseType;
 import jakarta.persistence.AttributeConverter;
 
 public class CourseTypeConverter implements AttributeConverter<CourseType, String> {

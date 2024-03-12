@@ -21,6 +21,10 @@ spring:
         format_sql: true
         show_sql: true
         generate_statistics: true
+  data:
+    redis:
+      port: 6397
+      host: localhost
 server:
   port: 8080
   servlet:

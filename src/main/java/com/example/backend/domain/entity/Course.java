@@ -2,6 +2,7 @@ package com.example.backend.domain.entity;
 
 import com.example.backend.domain.entity.converters.CourseTypeConverter;
 import com.example.backend.domain.entity.converters.ListOfStringConverter;
+import com.example.backend.domain.entity.enums.CourseType;
 import jakarta.persistence.Access;
 import jakarta.persistence.AccessType;
 import jakarta.persistence.Column;
