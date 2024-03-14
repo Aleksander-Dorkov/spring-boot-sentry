@@ -20,7 +20,7 @@ spring:
       hibernate:
         format_sql: true
         show_sql: true
-        generate_statistics: true
+        generate_statistics: false
   data:
     redis:
       port: 6397
@@ -29,3 +29,11 @@ server:
   port: 8080
   servlet:
     context-path: /api
+#This changes the logging level of a package, so if we have log.debug and our log level is info it will not be shows
+
+sentry:
+  dsn: https://3290199943dc4df38a596e97c4d976cb@o4506907607236608.ingest.us.sentry.io/4506907609202688
+  # Set traces-sample-rate to 1.0 to capture 100% of transactions for performance monitoring.
+  # We recommend adjusting this value in production.
+  traces-sample-rate: 1.0
+  ignored-exceptions-for-type: java.lang.RuntimeException, java.lang.NullPointerException, com.example.backend.controller.MyCustomException1
